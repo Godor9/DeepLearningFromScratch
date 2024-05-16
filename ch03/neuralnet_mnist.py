@@ -38,7 +38,17 @@ accuracy_cnt = 0
 for i in range(len(x)):
     y = predict(network, x[i])
     p= np.argmax(y) # 获取概率最高的元素的索引
+    #%print(p)
     if p == t[i]:
         accuracy_cnt += 1
 
 print("Accuracy:" + str(float(accuracy_cnt) / len(x)))
+
+
+# Test result.
+# j=100
+#plt.imshow(x_test[j].reshape(28,28))  % show the image
+# a=predict(network,x_test[j])
+# np.argmax(a)
+# t_test(j)
+

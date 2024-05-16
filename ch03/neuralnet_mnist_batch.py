@@ -35,8 +35,12 @@ def predict(network, x):
 x, t = get_data()
 network = init_network()
 
-batch_size = 100 # 批数量
+batch_size = 10000 # 批数量
 accuracy_cnt = 0
+
+#WHL: batch_size=1, it equals neuralnet_mnist. It takes about 5s for th total time.
+# batch_size=1000, the total time is 2.54s. 
+#However, the wall time is much smaller due to concurrency and other factors.
 
 for i in range(0, len(x), batch_size):
     x_batch = x[i:i+batch_size]

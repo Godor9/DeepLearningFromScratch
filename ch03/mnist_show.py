@@ -21,3 +21,7 @@ img = img.reshape(28, 28)  # 把图像的形状变为原来的尺寸
 print(img.shape)  # (28, 28)
 
 img_show(img)
+
+# It was not possible to download Mnist dataset from Yan Lekun's websites. So I downloaded 
+# them from Kaggle and modify dataset/minst/load_mnist
+# WHL:plt.imshow(x_train[0].reshape(28,28))
